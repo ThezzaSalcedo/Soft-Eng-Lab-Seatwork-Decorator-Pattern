@@ -1,6 +1,8 @@
 public class CoffeeTest {
     public static void main(String[] args) {
         
+        System.out.println("========== Brewtiful Coffee Shop ==========\n");
+       
         //make coffee
         Coffee blackCoffee = new BlackCoffee();
         System.out.println("Description: " + blackCoffee.getDescription());
