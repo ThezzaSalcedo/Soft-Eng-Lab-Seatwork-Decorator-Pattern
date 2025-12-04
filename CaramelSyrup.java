@@ -1,16 +1,20 @@
 public class CaramelSyrup implements CoffeeDecorator{
-    public CaramelSyrup(Coffee coffee) {
-        this.coffee = coffee;
-    }
+    
+    private Coffee wrappedCoffee;
 
     @Override
     public String getDescription() {
-        return coffee.getDescription() + ", Caramel Syrup"
+        return wrappedCoffee.getDescription() + ", Caramel Syrup"
 ;
     }
 
     @Override
     public double getCost() {
-        return coffee.getCost() + "40.00"; // ₱40.00 extra
+        return wrappedCoffee.getCost() + 40.00; // ₱40.00 extra
+    }
+
+     @Override
+    public void setCoffee(Coffee coffee) {
+        wrappedCoffee = coffee;
     }
 }
